@@ -15,5 +15,19 @@
   "bugs": {
     "url": "https://github.com/OXOYO/X-RESTful-API-Generator-Koa/issues"
   },
-  "homepage": "https://github.com/OXOYO/X-RESTful-API-Generator-Koa#readme"
+  "homepage": "https://github.com/OXOYO/X-RESTful-API-Generator-Koa#readme",
+  "dependencies": {
+    "jsonwebtoken": "^8.1.0",
+    "koa": "^2.3.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compose": "^4.0.0",
+    "koa-convert": "^1.2.0",
+    "koa-cors": "0.0.16",
+    "koa-generic-session": "^2.0.0",
+    "koa-helmet": "^3.2.0",
+    "koa-logger": "^3.1.0",
+    "koa-router": "^7.2.1",
+    "koa-static": "^4.0.1",
+    "require-directory": "^2.1.1"
+  }
 }
