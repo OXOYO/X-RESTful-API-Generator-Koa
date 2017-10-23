@@ -1,0 +1,19 @@
+{
+  "name": "x-restful-api-generator-koa",
+  "version": "1.0.0",
+  "description": "A RESTful API generator for Koa.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/OXOYO/X-RESTful-API-Generator-Koa.git"
+  },
+  "author": "OXOYO",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/OXOYO/X-RESTful-API-Generator-Koa/issues"
+  },
+  "homepage": "https://github.com/OXOYO/X-RESTful-API-Generator-Koa#readme"
+}
