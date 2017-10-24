@@ -8,5 +8,11 @@
 ```bash
   git clone
   npm i
-  npm run start
+  npm run dev
+```
+
+## TODO
+
+```bash
+  1.Server
 ```

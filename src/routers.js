@@ -9,7 +9,7 @@ const routersObj = {}
 // 解析apps路由
 let apps = requireDirectory(module, './apps')
 for (let key in apps) {
-  let routers = apps[key]['routers']
+  let routers = apps[key]['Routers']
   routersObj[key] = routers.default
 }
 
