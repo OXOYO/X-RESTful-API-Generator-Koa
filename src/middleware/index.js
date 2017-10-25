@@ -11,7 +11,7 @@ import bodyParser from 'koa-bodyparser'
 import session from 'koa-generic-session'
 import KoaStatic from 'koa-static'
 
-// import statusParser from './statusParser'
+import statusParser from './statusParser'
 
 import { System as SystemConfig } from '../config'
 
@@ -53,8 +53,7 @@ export default function middleware (app) {
       formLimit: '10mb',
       textLimit: '20mb'
     })),
-    convert(session(app))
-    // ,
-    // statusParser()
+    convert(session(app)),
+    statusParser()
   ])
 }

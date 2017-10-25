@@ -42,4 +42,5 @@
 
 ```bash
   1.DB Schema
+  2.sequelize & sequelize-auto
 ```
