@@ -3,5 +3,11 @@
  */
 
 export default {
-
+  getList: async (data) => {
+    let res = {
+      count: 300,
+      list: []
+    }
+    return res
+  }
 }

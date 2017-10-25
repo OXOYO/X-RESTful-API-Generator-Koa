@@ -22,7 +22,7 @@ export const DB = {
 }
 
 export const Api = {
-  prefix: 'x-restful-api-generator-koa'
+  prefix: '/x-restful-api-generator-koa'
 }
 
 export const Cookie = {

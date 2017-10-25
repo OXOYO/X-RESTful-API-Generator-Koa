@@ -27,11 +27,11 @@ if (env === 'development') { // logger
 }
 
 app.on('error', function (err, ctx) {
-  console.log('server error', err)
+  console.log('Service error', err)
 })
 
 app.listen(SystemConfig.port, function () {
-  let serverPath = SystemConfig.protocol + SystemConfig.host + ( SystemConfig.port ? ':' + SystemConfig.port : SystemConfig.port )
+  let serverPath = SystemConfig.protocol + SystemConfig.host + (SystemConfig.port ? ':' + SystemConfig.port : SystemConfig.port)
   console.log('RESTful API Server is listening to ' + serverPath)
 })
 

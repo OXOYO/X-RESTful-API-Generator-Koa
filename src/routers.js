@@ -12,5 +12,5 @@ for (let key in apps) {
   let routers = apps[key]['Routers']
   routersObj[key] = routers.default
 }
-
+console.log(routersObj)
 export default routersObj

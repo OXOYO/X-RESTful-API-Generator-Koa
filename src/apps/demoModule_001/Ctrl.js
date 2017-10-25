@@ -7,13 +7,14 @@ import Model from './Model'
 export default {
   getList: async (ctx, next) => {
     await next()
+    console.log('Enter getList Ctrl.')
     let reqQuery = ctx.query
     // 查询结果
-    // let res = await Model.getAccountList(reqQuery)
-    let res = {
-      count: 100,
-      list: []
-    }
+    let res = await Model.getList(reqQuery)
+    // let res = {
+    //   count: 100,
+    //   list: []
+    // }
     // 处理结果
     if (res) {
       res = {

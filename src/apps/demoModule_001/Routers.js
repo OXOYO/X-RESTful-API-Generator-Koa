@@ -9,5 +9,6 @@ const namespace = '/demoModule_001/'
 
 export default (router) => {
   router
+    .get(namespace + 'verify/list', auth.verify, Ctrl.getList)
     .get(namespace + 'list', Ctrl.getList)
 }

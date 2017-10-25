@@ -11,6 +11,8 @@ import bodyParser from 'koa-bodyparser'
 import session from 'koa-generic-session'
 import KoaStatic from 'koa-static'
 
+// import statusParser from './statusParser'
+
 import { System as SystemConfig } from '../config'
 
 export default function middleware (app) {
@@ -23,6 +25,7 @@ export default function middleware (app) {
       origin: function (request) {
         let host = request.header.origin
         let isIncludes = false
+        // console.log('host', request.header)
         // FIXME 安全起见，上线时需注掉如下判断
         if (!host) {
           return '*'
@@ -51,5 +54,7 @@ export default function middleware (app) {
       textLimit: '20mb'
     })),
     convert(session(app))
+    // ,
+    // statusParser()
   ])
 }
