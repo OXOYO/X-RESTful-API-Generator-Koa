@@ -22,12 +22,13 @@ export const DB = {
 }
 
 export const Api = {
+  // 自定义URL前缀
   prefix: '/x-restful-api-generator-koa'
 }
 
 export const Cookie = {
   keys: {
     token: 'x-restful-api-key',
-    secret: ''
+    secret: 'x-restful-api-generator-koa'
   }
 }

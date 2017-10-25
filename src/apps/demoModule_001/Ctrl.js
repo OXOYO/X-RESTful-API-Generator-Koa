@@ -3,8 +3,24 @@
  */
 
 import Model from './Model'
+import auth from '../../auth'
 
 export default {
+  doLogin: async (ctx, next) => {
+    await next()
+    let token = auth.sign({
+      userName: 'test',
+      password: '123456'
+    })
+    let res = {
+      code: 200,
+      msg: '登录成功！',
+      data: {
+        token: token
+      }
+    }
+    ctx.body = res || {}
+  },
   getList: async (ctx, next) => {
     await next()
     console.log('Enter getList Ctrl.')

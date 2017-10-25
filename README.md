@@ -12,6 +12,19 @@
 ```
 
 ## Demo
+  URL: http://localhost:3000/x-restful-api-generator-koa/demoModule_001/login
+
+  Resonse:
+  ```bash
+    {
+        "code": 200,
+        "msg": "登录成功！",
+        "data": {
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyTmFtZSI6InRlc3QiLCJwYXNzd29yZCI6IjEyMzQ1NiIsImlhdCI6MTUwODkyMTY2OSwiZXhwIjoxNTA5MDA4MDY5fQ.2occtME3kLUDxntJXOz5e1dkspybGIVqbDPRgaE6lZA"
+        }
+    }
+  ```
+
   URL: http://localhost:3000/x-restful-api-generator-koa/demoModule_001/list
 
   Response:
