@@ -56,4 +56,5 @@
 ```bash
   1.DB Schema
   2.sequelize & sequelize-auto
+  3.error handler middleware
 ```
