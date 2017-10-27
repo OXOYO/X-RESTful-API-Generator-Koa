@@ -165,7 +165,6 @@
 ## TODO
 
 ```bash
-  1.DB Schema
-  2.sequelize & sequelize-auto
-  3.error handler middleware
+  1.error handler middleware
+  2.file upload demo
 ```
