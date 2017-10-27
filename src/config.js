@@ -17,7 +17,7 @@ export const DB = {
   port: 3306,
   username: 'root',
   password: '',
-  database: 'test',
+  database: 'x-restful-api-generator-koa',
   prefix: ''
 }
 

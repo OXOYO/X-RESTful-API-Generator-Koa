@@ -30,7 +30,10 @@
     "koa-logger": "^3.1.0",
     "koa-router": "^7.2.1",
     "koa-static": "^4.0.1",
-    "require-directory": "^2.1.1"
+    "mysql2": "^1.4.2",
+    "require-directory": "^2.1.1",
+    "sequelize": "^4.18.0",
+    "sequelize-auto": "^0.4.29"
   },
   "devDependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
