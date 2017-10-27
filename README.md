@@ -67,7 +67,7 @@
   Response:
   ```bash
     {
-      "status": 200,
+      "code": 200,
       "msg": "添加文章成功！",
       "data": {
         "id": 3,
@@ -92,7 +92,7 @@
   Response:
   ```bash
     {
-      "status": 200,
+      "code": 200,
       "msg": "编辑文章成功！",
       "data": {
         "id": 3,
@@ -116,7 +116,7 @@
   Response:
   ```bash
     {
-      "status": 200,
+      "code": 200,
       "msg": "删除文章成功！",
       "data": 1
     }
@@ -127,7 +127,7 @@
   Response:
   ```bash
     {
-      "status": 200,
+      "code": 200,
       "msg": "查询账号列表成功！",
       "data": {
         "count": 2,
