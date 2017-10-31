@@ -11,6 +11,16 @@
   npm run dev
 ```
 
+## Build
+```bash
+  npm run build
+```
+
+## production
+```bash
+  pm2 start ecosystem.config.js
+```
+
 ## Demo
 
 ### demoModule_001
@@ -144,13 +154,13 @@
     }
   ```
 
-## Develop
+## Develop Step
   1.Edit config.js
 
   2.Export the database to schema by [sequelize-auto](https://github.com/sequelize/sequelize-auto)
 
   ```bash
-  sequelize-auto -o "./src/schema" -d x-restful-api-generator-koa -h localhost -u root -p 3306 -e mysql
+    sequelize-auto -o "./src/schema" -d x-restful-api-generator-koa -h localhost -u root -p 3306 -e mysql
   ```
 
   3.Create Modules
