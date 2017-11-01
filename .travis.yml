@@ -1,7 +1,6 @@
 language: node_js
 node_js:
+  - stable
   - "7.6.0"
-  - "8.1.2"
-  - "9.0.0"
-script: npm run test
-install: travis_wait npm install
+script: npm test
+install: travis_wait mvn install
