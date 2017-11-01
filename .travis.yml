@@ -3,4 +3,4 @@ node_js:
   - stable
   - "7.6.0"
 script: npm test
-install: travis_wait mvn install
+install: travis_wait npm install
