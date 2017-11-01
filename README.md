@@ -2,7 +2,6 @@
 
     A RESTful API generator for Koa.
 
-
 ## Start
 
 ```bash
@@ -10,6 +9,7 @@
   npm i
   npm run dev
 ```
+Node.js >= 7.6.0 required.
 
 ## Build
 ```bash

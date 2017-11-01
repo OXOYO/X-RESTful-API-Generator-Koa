@@ -56,5 +56,9 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-sequence": "^0.4.6",
     "nodemon": "^1.12.1"
+  },
+  "engines": {
+    "node": ">= 7.6.0",
+    "npm": ">= 4.1.2"
   }
 }
