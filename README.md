@@ -178,3 +178,6 @@ Node.js >= 7.6.0 required.
   1.error handler middleware
   2.file upload demo
 ```
+
+## License
+[MIT](http://opensource.org/licenses/MIT)
