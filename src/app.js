@@ -35,4 +35,4 @@ app.listen(SystemConfig.port, function () {
   console.log('RESTful API Server is listening to ' + serverPath)
 })
 
-export default app
+exports = module.exports = app
