@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha -u bdd",
+    "cov": "istanbul cover node_modules/mocha/bin/_mocha && codecov",
     "dev": "gulp default",
     "start": "gulp default",
     "build": "babel src -d dist"
@@ -20,6 +21,7 @@
   },
   "homepage": "https://github.com/OXOYO/X-RESTful-API-Generator-Koa#readme",
   "dependencies": {
+    "codecov": "^3.0.0",
     "jsonwebtoken": "^8.1.0",
     "koa": "^2.3.0",
     "koa-bodyparser": "^4.2.0",
@@ -55,6 +57,7 @@
     "gulp-eslint": "^4.0.0",
     "gulp-nodemon": "^2.2.1",
     "gulp-sequence": "^0.4.6",
+    "istanbul": "^0.4.5",
     "mocha": "^4.0.1",
     "nodemon": "^1.12.1",
     "should": "^13.1.3",
