@@ -5,5 +5,5 @@ node_js:
 install:
   - travis_wait npm install
 script:
-  - npm test
-  - npm cov
+  - npm run test
+  - npm run cov
