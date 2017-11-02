@@ -4,6 +4,8 @@
 
 [ ![Travis CI Status](https://travis-ci.org/OXOYO/X-RESTful-API-Generator-Koa.svg?branch=master)](https://travis-ci.org/OXOYO/X-RESTful-API-Generator-Koa)
 [![codecov.io](https://codecov.io/github/OXOYO/X-RESTful-API-Generator-Koa/coverage.svg?branch=master)](https://codecov.io/github/OXOYO/X-RESTful-API-Generator-Koa?branch=master)
+[![dependencies Status](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa/status.svg)](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa)
+[![devDependencies Status](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa/dev-status.svg)](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa?type=dev)
 
 ## Start
 
