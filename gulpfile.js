@@ -10,16 +10,14 @@ const eslintFriendlyFormatter = require('eslint-friendly-formatter')
 
 const config = {
   server: {
-    script: './build/index.js'
+    script: './src/server.js'
   }
 }
 
-// eslint
-gulp.task('ESlint', () => {
-  return gulp.src([
-    'src/**',
-    '!node_modules/**'
-  ]).pipe(
+const lintFiles = (files) => {
+  return gulp.src(
+    files
+  ).pipe(
     gulpEslint({
       configFile: './.eslintrc.js'
     })
@@ -41,6 +39,15 @@ gulp.task('ESlint', () => {
       console.log(`Total Errors: ${results.errorCount}`)
     })
   )
+}
+
+// eslint
+gulp.task('ESlint', () => {
+  lintFiles([
+    'src/**',
+    'src/**',
+    '!node_modules/**'
+  ])
 })
 
 // nodemon
@@ -51,7 +58,10 @@ gulp.task('nodemon', () => {
     env: {
       'NODE_ENV': 'development'
     },
-    tasks: ['ESlint']
+    tasks: (changedFiles) => {
+      lintFiles(changedFiles)
+      return []
+    }
   })
   stream.on('restart', () => {
     console.log('Service restarted!')

@@ -7,7 +7,7 @@ module.exports = {
     // 应用配置
     {
       name: 'x-restful-api-generator-koa',
-      script: './dist/app.js',
+      script: './dist/server.js',
       watch: true,
       env: {
         NODE_ENV: 'development'
