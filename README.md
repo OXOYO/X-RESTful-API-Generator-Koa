@@ -2,6 +2,9 @@
 
     A RESTful API generator for Koa.
 
+[ ![Travis CI Status](https://travis-ci.org/OXOYO/X-RESTful-API-Generator-Koa.svg?branch=master)](https://travis-ci.org/OXOYO/X-RESTful-API-Generator-Koa)
+[![codecov.io](https://codecov.io/github/OXOYO/X-RESTful-API-Generator-Koa/coverage.svg?branch=master)](https://codecov.io/github/OXOYO/X-RESTful-API-Generator-Koa?branch=master)
+
 ## Start
 
 ```bash
