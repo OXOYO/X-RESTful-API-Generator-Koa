@@ -4,9 +4,11 @@
 
 [ ![Travis CI Status](https://travis-ci.org/OXOYO/X-RESTful-API-Generator-Koa.svg?branch=master)](https://travis-ci.org/OXOYO/X-RESTful-API-Generator-Koa)
 [![codecov.io](https://codecov.io/github/OXOYO/X-RESTful-API-Generator-Koa/coverage.svg?branch=master)](https://codecov.io/github/OXOYO/X-RESTful-API-Generator-Koa?branch=master)
+[![node](https://img.shields.io/badge/node-v7.6.0+-blue.svg)](https://nodejs.org/)
+[![GitHub package version](https://img.shields.io/github/package-json/v/OXOYO/X-RESTful-API-Generator-Koa.svg)]()
 [![dependencies Status](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa/status.svg)](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa)
-[![devDependencies Status](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa/dev-status.svg)](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa?type=dev)
 [![codebeat badge](https://codebeat.co/badges/824b49d9-dd7f-4502-9965-76aef840f8d2)](https://codebeat.co/projects/github-com-oxoyo-x-restful-api-generator-koa-master)
+[![license](https://img.shields.io/github/license/OXOYO/X-RESTful-API-Generator-Koa.svg)]()
 
 ## Start
 
