@@ -33,39 +33,6 @@ export const Cookie = {
   }
 }
 
-/*
-export const Log = {
-  // 日志输出配置
-  appenders: [
-    // 错误日志
-    {
-      // 分类名称
-      'category': 'errorLogger',
-      // 日志类型
-      'type': 'dateFile',
-      // 日志文件
-      'filename': './logs/error',
-      // 是否总是有后缀名
-      'alwaysIncludePattern': true,
-      // 文件名格式
-      'pattern': '-yyyy-MM-dd-hh.log'
-    },
-    // 响应日志
-    {
-      'category': 'resLogger',
-      'type': 'dateFile',
-      'filename': './logs/response',
-      'alwaysIncludePattern': true,
-      'pattern': '-yyyy-MM-dd-hh.log'
-    }
-  ],
-  // 设置logger名称对应的的日志等级
-  'levels': {
-    'errorLogger': 'ERROR',
-    'resLogger': 'ALL'
-  }
-}
-*/
 export const Log = {
   appenders: {
     out: {

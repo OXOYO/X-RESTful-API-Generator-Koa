@@ -45,7 +45,6 @@ const lintFiles = (files) => {
 gulp.task('ESlint', () => {
   lintFiles([
     'src/**',
-    'src/**',
     '!node_modules/**'
   ])
 })
@@ -54,7 +53,7 @@ gulp.task('ESlint', () => {
 gulp.task('nodemon', () => {
   let stream = gulpNodemon({
     script: config.server.script,
-    ext: 'js json',
+    ext: 'js',
     env: {
       'NODE_ENV': 'development'
     },
