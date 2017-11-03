@@ -9,6 +9,7 @@
 [![dependencies Status](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa/status.svg)](https://david-dm.org/OXOYO/X-RESTful-API-Generator-Koa)
 [![codebeat badge](https://codebeat.co/badges/824b49d9-dd7f-4502-9965-76aef840f8d2)](https://codebeat.co/projects/github-com-oxoyo-x-restful-api-generator-koa-master)
 [![license](https://img.shields.io/github/license/OXOYO/X-RESTful-API-Generator-Koa.svg)]()
+[![Gitter](https://img.shields.io/gitter/room/X-RESTful-API-Generator-Koa/chat.svg)](https://gitter.im/X-RESTful-API-Generator-Koa/chat)
 
 ## Start
 
