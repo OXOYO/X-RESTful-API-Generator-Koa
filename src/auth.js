@@ -13,11 +13,18 @@ export default {
   },
   // token 验证
   verify: async function (ctx, next) {
-    await next()
     // 支持多种方式传递token
     let key = CookieConfig.keys.token
     console.log('ctx.query', typeof ctx.query, ctx.query.hasOwnProperty)
     let token
+    let decoded
+    // 校验结果
+    let verifyRes = {
+      // 标识
+      flag: false,
+      // 数据
+      data: {}
+    }
     if (ctx.body && Object.prototype.hasOwnProperty.call(ctx.body, key)) {
       token = ctx.body[key]
     } else if (ctx.query && Object.prototype.hasOwnProperty.call(ctx.query, key)) {
@@ -31,32 +38,54 @@ export default {
     // 1.判断是否存在token
     if (token) {
       try {
-        // 1.1.verify验证token
-        let decoded = jsonwebtoken.verify(token, CookieConfig.keys.secret)
+        // 2.1.verify验证token
+        decoded = jsonwebtoken.verify(token, CookieConfig.keys.secret)
         console.log('decoded', decoded, new Date() / 1000)
-        // 1.2.验证token是否过期
+        // 2.1.验证token是否过期
         if (decoded.exp * 1000 <= new Date()) {
-          ctx.body = {
-            code: 9999,
-            msg: 'token过期！请重新登录！',
-            data: {}
+          verifyRes = {
+            flag: false,
+            data: {
+              status: 9999,
+              msg: 'token过期！请重新登录！',
+              data: {}
+            }
           }
         } else {
-          return
+          verifyRes = {
+            flag: true,
+            data: {}
+          }
         }
       } catch (err) {
-        ctx.body = {
-          code: 9999,
-          msg: 'token校验失败！请重新登录！',
-          data: err
+        verifyRes = {
+          flag: false,
+          data: {
+            status: 9999,
+            msg: 'token校验失败！请重新登录！',
+            data: err
+          }
         }
       }
     } else {
-      ctx.body = {
-        code: 9999,
-        msg: 'token无效！请重新登录！',
-        data: {}
+      verifyRes = {
+        flag: false,
+        data: {
+          status: 9999,
+          msg: 'token无效！请重新登录！',
+          data: {}
+        }
       }
+    }
+    // 判断校验结果，分别处理
+    if (verifyRes.flag) {
+      // token有效，传递给上下文
+      ctx['userInfo'] = decoded
+      await next()
+    } else {
+      // token无效，直接返回
+      await next()
+      ctx.body = verifyRes.data
     }
   }
 }
