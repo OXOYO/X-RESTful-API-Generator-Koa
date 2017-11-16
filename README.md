@@ -163,6 +163,31 @@ Node.js >= 7.6.0 required.
     }
   ```
 
+### File Upload
+  URL: http://localhost:63342/X-RESTful-API-Generator-Koa/src/apps/Files/upload.html
+
+  Response:
+  ```bash
+    {
+      "status": 200,
+      "msg": "上传成功！",
+      "data": {
+        "file": {
+          "fieldname": "file",
+          "originalname": "app.png",
+          "encoding": "7bit",
+          "mimetype": "image/png",
+          "destination": "E:\\Webstorm_WorkSpace\\X-RESTful-API-Generator-Koa\\assets\\uploads",
+          "filename": "1510817484098.png",
+          "path": "E:\\Webstorm_WorkSpace\\X-RESTful-API-Generator-Koa\\assets\\uploads\\1510817484098.png",
+          "size": 958
+        },
+        "filename": "1510817484098.png",
+        "url": "//localhost:3000/assets/uploads/1510817484098.png"
+      }
+    }
+  ```
+
 ## Develop Step
   1.Edit config.js
 
@@ -185,7 +210,6 @@ Node.js >= 7.6.0 required.
 
 ```bash
   1.error handler middleware
-  2.file upload demo
 ```
 
 ## License

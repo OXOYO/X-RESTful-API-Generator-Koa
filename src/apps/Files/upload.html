@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <title>文件上传Demo</title>
+    <style>
+      html, body {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        font-family: Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,\\5FAE\8F6F\96C5\9ED1,Arial,sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      .main-box {
+        width: 600px;
+        margin: 50px auto;
+        padding: 10px;
+        border: 1px solid #f5f7f9;
+        border-radius: 2px;
+      }
+      .upload-header {
+        border-bottom: 1px solid #cccccc;
+        text-align: left;
+        margin-bottom: 10px;
+      }
+      .upload-body {
+        position: relative;
+        width: 80px;
+        background: #2d8cf0;
+        text-align: center;
+        color: #FFF;
+        padding: 0px 5px;
+        -webkit-border-radius: 2px;
+        border-radius: 2px;
+        padding: 5px;
+      }
+
+      .upload-body:hover {
+        background: #57a3f3;
+      }
+
+      .upload-body span {}
+
+      .upload-body form {
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        opacity: 0;
+        filter: alpha(opacity=0);
+      }
+
+      .upload-body form input {
+        width: 100%;
+      }
+      .upload-footer {
+        border: 1px solid #f5f7f9;
+        margin: 10px auto;
+      }
+      .preview-list {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+      }
+      .preview-item {
+        margin: 0;
+        padding: 5px;
+        list-style: none;
+        cursor: default;
+      }
+      .preview-item:hover {
+        background: #f5f7f9;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main-box">
+      <div class="upload-header">
+        文件上传Demo
+      </div>
+      <div class="upload-body">
+        <span>上传图片</span>
+        <form id="uploadForm" enctype="multipart/form-data" method="post">
+          <input type="file" name="uploadFile" id="uploadFile" onchange="doUpload()" />
+        </form>
+      </div>
+      <div class="upload-footer">
+        <ul id="previewList" class="preview-list">
+        </ul>
+      </div>
+    </div>
+    <script src="//cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script>
+      var doUpload = function () {
+        var formData = new FormData()
+        var name = $('input').val()
+        formData.append('file', $('#uploadFile')[0].files[0])
+        formData.append('name', name)
+        $.ajax({
+          url: 'http://localhost:3000/x-restful-api-generator-koa/files/upload',
+          type: 'POST',
+          data: formData,
+          processData: false,
+          contentType: false,
+          success: function (res) {
+            if (res.status === 200) {
+              console.log('成功', res)
+              var childArr = [
+                '<li class="preview-item">',
+                  '<div>',
+                    'filename: ',
+                    res.data.filename,
+                  '</div>',
+                  '<div>',
+                    'url: ',
+                    res.data.url,
+                  '</div>',
+                '</li>'
+              ]
+              $('#previewList').append(childArr.join(''))
+            } else {
+              console.log('失败', res)
+            }
+          },
+          error: function (res) {
+            console.log('error', res)
+          }
+        })
+      }
+    </script>
+  </body>
+</html>

@@ -1,3 +1,4 @@
 build/*.js
 assets/*.js
 src/schema/*.js
+src/apps/Files/*.html

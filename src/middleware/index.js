@@ -19,7 +19,7 @@ export default function middleware (app) {
   return compose([
     logger(),
     helmet(),
-    KoaStatic('static'),
+    KoaStatic('.'),
     // 跨域处理
     convert(cors({
       origin: function (request) {
