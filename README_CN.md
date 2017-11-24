@@ -1,6 +1,6 @@
 # X-RESTful-API-Generator-Koa
 
-A RESTful API service generator by Koa.
+一个基于 Koa 的 RESTful API 服务脚手架。
 
 [ ![Travis CI Status](https://travis-ci.org/OXOYO/X-RESTful-API-Generator-Koa.svg?branch=master)](https://travis-ci.org/OXOYO/X-RESTful-API-Generator-Koa)
 [![codecov.io](https://codecov.io/github/OXOYO/X-RESTful-API-Generator-Koa/coverage.svg?branch=master)](https://codecov.io/github/OXOYO/X-RESTful-API-Generator-Koa?branch=master)
@@ -11,26 +11,26 @@ A RESTful API service generator by Koa.
 [![license](https://img.shields.io/github/license/OXOYO/X-RESTful-API-Generator-Koa.svg)]()
 [![Gitter](https://img.shields.io/gitter/room/X-RESTful-API-Generator-Koa/chat.svg)](https://gitter.im/X-RESTful-API-Generator-Koa/chat)
 
-English | [简体中文](./README_CN.md)
+[English](./README.md) | 简体中文
 
-## Start
+## 开始
 ```bash
   git clone
   npm i
   npm run dev
 ```
-Node.js >= 7.6.0 required.
+Node.js 版本需 >= 7.6.0.
 
-## Develop Step
-  1.Edit config.js
+## 开发步骤
+  1.编辑 config.js
 
-  2.Export the database to schema by [sequelize-auto](https://github.com/sequelize/sequelize-auto)
+  2.使用 [sequelize-auto](https://github.com/sequelize/sequelize-auto) 将数据库导出为 schema 模型
 
   ```bash
     sequelize-auto -o "./src/schema" -d x-restful-api-generator-koa -h localhost -u root -p 3306 -e mysql
   ```
 
-  3.Create module directories and files
+  3.创建模块目录、文件
   ```bash
     apps
       \_ newModules
@@ -39,19 +39,19 @@ Node.js >= 7.6.0 required.
           Routers.js
   ```
 
-## Build
+## 打包
 ```bash
   npm run build
 ```
 
-## production
+## 生产环境
 ```bash
   pm2 start ecosystem.config.js
 ```
 
-## Demo
+## 栗子🌰
 
-To run the demo, you need to import the `./src/x-restful-api-generator-koa.sql` into Mysql
+运行 demo 需要先将 `./src/x-restful-api-generator-koa.sql` 导入Mysql
 
 ### demoModule_001
   URL: http://localhost:3000/x-restful-api-generator-koa/demoModule_001/login

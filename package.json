@@ -1,7 +1,7 @@
 {
   "name": "x-restful-api-generator-koa",
   "version": "1.0.1",
-  "description": "A RESTful API generator for Koa.",
+  "description": "A RESTful API service generator by Koa.",
   "main": "server.js",
   "scripts": {
     "test": "npm run build && mocha -u bdd",
