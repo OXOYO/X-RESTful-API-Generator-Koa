@@ -25,6 +25,8 @@ app.use(async (ctx, next) => {
   }
 })
 
+// 注册qs
+require('koa-qs')(app)
 // 注册路由
 app.use(api())
 // 注册中间件
