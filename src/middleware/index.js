@@ -3,6 +3,7 @@
  */
 
 import compose from 'koa-compose'
+import convert from 'koa-convert'
 import helmet from 'koa-helmet'
 import logger from 'koa-logger'
 import cors from 'koa-cors'
@@ -17,7 +18,7 @@ export default function middleware (app) {
     helmet(),
     KoaStatic('.'),
     // 跨域处理
-    cors({
+    convert(cors({
       origin: function (request) {
         let host = request.header.origin
         let isIncludes = false
@@ -42,7 +43,7 @@ export default function middleware (app) {
       credentials: true,
       allowMethods: ['PUT', 'POST', 'GET', 'DELETE', 'OPTIONS'],
       allowHeaders: ['Content-Type', 'Content-Length', 'Authorization', 'Accept', 'X-Requested-With', 'Origin']
-    }),
+    })),
     bodyParser({
       strict: false,
       jsonLimit: '20mb',
