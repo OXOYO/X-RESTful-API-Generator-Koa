@@ -27,6 +27,7 @@ Node.js >= 7.6.0 required.
   2.Export the database to schema by [sequelize-auto](https://github.com/sequelize/sequelize-auto)
 
   ```bash
+    npm -g install mysql
     sequelize-auto -o "./src/schema" -d x-restful-api-generator-koa -h localhost -u root -p 3306 -e mysql
   ```
 

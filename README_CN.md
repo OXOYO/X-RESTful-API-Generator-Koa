@@ -27,6 +27,7 @@ Node.js 版本需 >= 7.6.0.
   2.使用 [sequelize-auto](https://github.com/sequelize/sequelize-auto) 将数据库导出为 schema 模型
 
   ```bash
+    npm -g install mysql
     sequelize-auto -o "./src/schema" -d x-restful-api-generator-koa -h localhost -u root -p 3306 -e mysql
   ```
 
