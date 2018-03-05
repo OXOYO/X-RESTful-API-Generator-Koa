@@ -3,15 +3,11 @@
  */
 
 import compose from 'koa-compose'
-import convert from 'koa-convert'
 import helmet from 'koa-helmet'
 import logger from 'koa-logger'
 import cors from 'koa-cors'
 import bodyParser from 'koa-bodyparser'
-import session from 'koa-generic-session'
 import KoaStatic from 'koa-static'
-
-// import statusParser from './statusParser'
 
 import { System as SystemConfig } from '../config'
 
@@ -21,7 +17,7 @@ export default function middleware (app) {
     helmet(),
     KoaStatic('.'),
     // 跨域处理
-    convert(cors({
+    cors({
       origin: function (request) {
         let host = request.header.origin
         let isIncludes = false
@@ -46,15 +42,12 @@ export default function middleware (app) {
       credentials: true,
       allowMethods: ['PUT', 'POST', 'GET', 'DELETE', 'OPTIONS'],
       allowHeaders: ['Content-Type', 'Content-Length', 'Authorization', 'Accept', 'X-Requested-With', 'Origin']
-    })),
-    convert(bodyParser({
+    }),
+    bodyParser({
       strict: false,
       jsonLimit: '20mb',
       formLimit: '10mb',
       textLimit: '20mb'
-    })),
-    convert(session(app))
-    // ,
-    // statusParser()
+    })
   ])
 }

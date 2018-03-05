@@ -35,8 +35,11 @@ export default {
     await next()
     // 查询结果
     let reqBody = ctx.request.body
+    let timeNow = new Date()
     let data = {
-      ...reqBody
+      ...reqBody,
+      createdAt: timeNow,
+      updatedAt: timeNow
     }
     let res
     if (data && data.title && data.content) {
@@ -77,8 +80,10 @@ export default {
   doUpdate: async (ctx, next) => {
     await next()
     let reqBody = ctx.request.body
+    let timeNow = new Date()
     let data = {
-      ...reqBody
+      ...reqBody,
+      updatedAt: timeNow
     }
     let res
     if (data) {
