@@ -47,7 +47,7 @@ Node.js 版本需 >= 7.6.0.
 
 ## 生产环境
 ```bash
-  pm2 start ecosystem.config.js
+  pm2 start ecosystem.config.js --name x-restful-api-generator-koa --env production
 ```
 
 ## 栗子🌰

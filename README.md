@@ -47,7 +47,7 @@ Node.js >= 7.6.0 required.
 
 ## production
 ```bash
-  pm2 start ecosystem.config.js
+  pm2 start ecosystem.config.js --name x-restful-api-generator-koa --env production
 ```
 
 ## Demo
