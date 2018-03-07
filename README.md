@@ -15,8 +15,15 @@ English | [简体中文](./README_CN.md)
 
 ## Start
 ```bash
+  # clone
   git clone
+
+  # install dependencies
   npm i
+
+  # import the src/x-restful-api-generator-koa.sql into the database.
+
+  # start serve with hot reload
   npm run dev
 ```
 Node.js >= 7.6.0 required.

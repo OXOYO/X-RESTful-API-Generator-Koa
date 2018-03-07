@@ -15,9 +15,16 @@
 
 ## 开始
 ```bash
-  git clone
-  npm i
-  npm run dev
+  # clone
+    git clone
+
+    # install dependencies
+    npm i
+
+    # import the src/x-restful-api-generator-koa.sql into the database.
+
+    # start serve with hot reload
+    npm run dev
 ```
 Node.js 版本需 >= 7.6.0.
 
